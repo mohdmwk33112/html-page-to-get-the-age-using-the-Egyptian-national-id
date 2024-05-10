@@ -1,0 +1,30 @@
+a simple HTML page with embedded JavaScript code that calculates a person's age based on their national ID. Here's a breakdown of how it works:
+
+HTML Structure:
+The HTML structure defines a basic webpage with a title, a heading (<h1>), an input field for the national ID (<input>), a button (<button>), and a paragraph (<p>) to display the result.
+
+JavaScript Function:
+The returntext() function is invoked when the button is clicked. It retrieves the value entered in the national ID input field.
+It then extracts the century and year of birth from the national ID.
+It calculates the birth year based on the century and year obtained.
+It gets the current year from the system date and calculates the person's age by subtracting the birth year from the current year.
+Finally, it updates the paragraph with the ID "result" to display the calculated age.
+
+Explanation of Calculations:
+The script assumes that the first digit of the national ID represents the century (2 for 19th century, 3 for 20th century).
+It extracts the second and third digits to determine the year of birth.
+It calculates the birth year by adding the century to the extracted year.
+Then, it subtracts the birth year from the current year to get the age.
+
+Displaying the Result:
+The calculated age is displayed in the paragraph with the ID "result" using document.getElementById("result").innerHTML = age;.
+
+Execution:
+When the user enters their national ID and clicks the "Get my age" button, the script calculates the age and displays it on the webpage.
+Overall, this webpage provides a simple interface for users to input their national ID and obtain their age based on the extracted birth year and the current year.
+
+
+
+
+
+

@@ -1,0 +1,44 @@
+<DOCTYPE! html>
+    <html>
+
+    <head>
+        <title>
+            Age
+        </title>
+    </head>
+
+    <body style="text-align: center;">
+        <h1>Get Your Age by Your National ID</h1>
+
+        <p>Enter your national ID here:</p>
+
+        <input id="nationalid" type="text">
+
+        <button onclick="returntext()"> Get my age</button>
+
+        <script>
+            function returntext() {
+                let x = document.getElementById("nationalid").value;
+                let century = x.substr(0, 1);
+                let year = x.substr(1, 2);
+                let bdate = 0;
+                let date = this.innerHTML = Date();
+                let currentdate = date.slice(11, 15);
+                let age = 0;
+
+                if (century == "2") {
+                    bdate = 19;
+                    bdate += year;
+                }
+                if (century == "3") {
+                    bdate = 20;
+                    bdate += year;
+                }
+                age = currentdate - bdate;
+                document.getElementById("result").innerHTML = age;
+            }
+        </script>
+        <p id="result"></p>
+    </body>
+
+    </html>
